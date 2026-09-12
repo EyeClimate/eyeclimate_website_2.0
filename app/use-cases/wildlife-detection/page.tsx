@@ -123,7 +123,7 @@ export default function WildlifeDetectionPage() {
               ["Input", "Aerial survey imagery"],
               ["Capability", "Multi-species detection"],
             ]}
-            cta="Read the WACV paper →"
+            cta="Read the CVPR paper →"
           />
           <ProductRow
             image="/figma/wildlife-product-landing/cattlemapper-visual.webp"

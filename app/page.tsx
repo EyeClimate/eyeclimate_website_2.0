@@ -83,9 +83,7 @@ export default async function HomePage() {
               <span className="text-accent-green">Earth Observation</span>
             </h1>
             <p className="mt-7 max-w-contact-copy text-body leading-body text-text-muted md:text-body-lg">
-              We turn satellite, airborne, and ground-sensor data into
-              decision-ready intelligence. Built by researchers, validated
-              against real-world emissions, wildlife, and air quality.
+              We turn multi-modal data from different satellites and sensors into decision-ready actionable insights. Built by researchers, validated against real-world use cases.
             </p>
             <Link href="/contact" className={`${greenButton} mt-8`}>
               Book a demo&nbsp; →
@@ -412,10 +410,10 @@ export default async function HomePage() {
           </p>
           <div className="mt-9 grid grid-cols-2 overflow-hidden rounded-xl border border-divider">
             {[
-              ["12+", "Peer-reviewed publications"],
-              ["1.4k", "Citations"],
-              ["5+ yrs", "Research experience"],
-              ["3", "Top-tier venues"],
+              ["300+", "Publications and patents"],
+              ["11,000", "Citations"],
+              ["10+ years", "Avg. research exp. per person"],
+              ["Stanford / UCSB", "Startup"],
             ].map(([value, label]) => (
               <div key={label} className="border-b border-r border-divider p-6">
                 <p className="text-h3-mobile">{value}</p>

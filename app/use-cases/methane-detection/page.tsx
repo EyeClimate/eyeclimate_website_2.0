@@ -30,7 +30,7 @@ const data: CaseStudyData = {
       number: "01",
       title: "Context",
       paragraphs: [
-        "We collaborated on methane analysis using AVIRIS-NG, NASA Jet Propulsion Laboratory's airborne hyperspectral sensor. The dataset was shared with us by Sarah Ludreen and provided a high-resolution spectral view across 426 channels, spanning wavelengths from 400 nm to 2400 nm — visible to short-wave infrared.",
+        "We worked on methane analysis using AVIRIS-NG, NASA Jet Propulsion Laboratory's airborne hyperspectral sensor. The dataset was shared with us by Sarah Ludreen and provided a high-resolution spectral view across 426 channels, spanning wavelengths from 400 nm to 2400 nm — visible to short-wave infrared.",
         "This case study focused on evaluating the performance of our proprietary algorithm, MethaneMapper, on a highly complex airborne dataset designed to test both detection sensitivity and source separation under difficult real-world conditions.",
       ],
     },

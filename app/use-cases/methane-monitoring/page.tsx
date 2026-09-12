@@ -62,9 +62,11 @@ const data: CaseStudyData = {
         "Following mitigation, we re-ran the analysis to assess changes over time and provide updated evidence of emissions reduction — closing the loop from detection → verification → mitigation → verification.",
       ],
       figure: {
-        src: "/figma/case-study-methane-monitoring/solution-visual.webp",
+        src: "/figma/case-study-methane-monitoring/mm-methane-detection.webp",
         alt: "Satellite analysis of the monitored refinery",
-        caption: "July 09, 2022 · Detected: 11,839 kg/hr",
+        caption: "November 20, 2019 · Detected: 915.63 kg/hr",
+        aspectRatio: 1575 / 924,
+        fullResolution: true,
       },
       numbered: [
         "Estimated methane emission quantities per source",

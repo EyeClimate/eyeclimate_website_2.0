@@ -77,7 +77,7 @@ export default function Nav() {
             width={28}
             height={28}
           />
-          <span>Eyeclimate</span>
+          <span>EyeClimate</span>
         </Link>
         <nav
           aria-label="Primary navigation"

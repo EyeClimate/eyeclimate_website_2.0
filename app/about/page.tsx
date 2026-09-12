@@ -169,7 +169,7 @@ export default async function AboutPage() {
             Eyeclimate began as a PhD research question at UCSB:
           </p>
           <blockquote className="mt-6 border-l-2 border-accent-green py-4 pl-6 text-body-lg italic leading-body md:text-h5">
-            “Can we actually see climate pollution and risk, not just model it?”
+            “Can we actually see environmental pollution and risk, not just model it?”
           </blockquote>
           <p className="mt-6 text-body leading-body text-text-muted">
             That question turned into prototypes, then field-tested tools, and

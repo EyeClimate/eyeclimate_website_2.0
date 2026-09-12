@@ -8,7 +8,13 @@ export type CaseSection = {
   paragraphs: string[];
   bullets?: string[];
   callout?: string;
-  figure?: { src: string; alt: string; caption: string };
+  figure?: {
+    src: string;
+    alt: string;
+    caption: string;
+    aspectRatio?: number;
+    fullResolution?: boolean;
+  };
   numbered?: string[];
 };
 
@@ -196,14 +202,40 @@ export default function CaseStudy({ data }: { data: CaseStudyData }) {
                 )}
                 {section.figure && (
                   <figure className="mt-8 rounded-xl border border-divider bg-figure p-3 md:p-7">
-                    <div className="case-figure-ratio relative overflow-hidden rounded-md bg-text-primary">
-                      <Image
-                        src={section.figure.src}
-                        alt={section.figure.alt}
-                        fill
-                        sizes="(min-width: 1024px) 780px, 100vw"
-                        className="object-contain"
-                      />
+                    <div
+                      className="case-figure-ratio relative overflow-hidden rounded-md bg-text-primary"
+                      style={
+                        section.figure.aspectRatio
+                          ? { aspectRatio: section.figure.aspectRatio }
+                          : undefined
+                      }
+                    >
+                      {section.figure.fullResolution ? (
+                        <Link
+                          href={section.figure.src}
+                          target="_blank"
+                          rel="noopener noreferrer"
+                          aria-label={`View ${section.figure.alt} at full resolution`}
+                          className="absolute inset-0 cursor-zoom-in"
+                        >
+                          <Image
+                            src={section.figure.src}
+                            alt={section.figure.alt}
+                            fill
+                            unoptimized
+                            sizes="(min-width: 1024px) 780px, 100vw"
+                            className="object-contain"
+                          />
+                        </Link>
+                      ) : (
+                        <Image
+                          src={section.figure.src}
+                          alt={section.figure.alt}
+                          fill
+                          sizes="(min-width: 1024px) 780px, 100vw"
+                          className="object-contain"
+                        />
+                      )}
                     </div>
                     <figcaption className="mt-4 text-center text-body-xs text-text-muted">
                       {section.figure.caption}
