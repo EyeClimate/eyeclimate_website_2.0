@@ -45,12 +45,13 @@ test("only public document paths are negotiated", () => {
 });
 
 test("agent discovery, recovery, privacy, and schema contracts are present", async () => {
-  const [agentContent, notFound, privacy, layout, sitemap, footer] =
+  const [agentContent, notFound, privacy, layout, manifest, sitemap, footer] =
     await Promise.all([
       readFile("lib/agent-content.ts", "utf8"),
       readFile("app/not-found.tsx", "utf8"),
       readFile("app/privacy/page.tsx", "utf8"),
       readFile("app/layout.tsx", "utf8"),
+      readFile("app/manifest.ts", "utf8"),
       readFile("app/sitemap.ts", "utf8"),
       readFile("components/Footer.tsx", "utf8"),
     ]);
@@ -67,6 +68,10 @@ test("agent discovery, recovery, privacy, and schema contracts are present", asy
   assert.match(layout, /description:/);
   assert.match(layout, /contactPoint:/);
   assert.match(layout, /"@type": "PostalAddress"/);
+  assert.match(layout, /url: "\/favicon\.png"/);
+  assert.match(layout, /sizes: "144x144"/);
+  assert.match(manifest, /src: "\/icon-512\.png"/);
+  assert.match(manifest, /sizes: "512x512"/);
   assert.match(sitemap, /"\/privacy"/);
   assert.match(footer, /\["Privacy", "\/privacy"\]/);
 });

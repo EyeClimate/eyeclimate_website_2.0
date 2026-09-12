@@ -28,6 +28,22 @@ export const metadata: Metadata = {
     "geospatial AI",
   ],
   category: "technology",
+  icons: {
+    icon: [
+      {
+        url: "/favicon.png",
+        type: "image/png",
+        sizes: "144x144",
+      },
+    ],
+    apple: [
+      {
+        url: "/apple-touch-icon.png",
+        type: "image/png",
+        sizes: "180x180",
+      },
+    ],
+  },
   openGraph: {
     type: "website",
     locale: "en_US",
