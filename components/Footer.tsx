@@ -8,6 +8,7 @@ const columns = [
       ["About", "/about"],
       ["News", "/news"],
       ["Contact", "/contact"],
+      ["Privacy", "/privacy"],
     ],
   },
   {

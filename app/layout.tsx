@@ -66,8 +66,32 @@ export default function RootLayout({
         "@type": "Organization",
         "@id": `${getSiteUrl()}/#organization`,
         name: "Eyeclimate",
+        description:
+          "Earth-observation intelligence company building AI products for methane emissions, wildlife monitoring, and air-quality analysis.",
         url: getSiteUrl(),
         logo: `${getSiteUrl()}/images/brand/eyeclimate-logo.webp`,
+        email: "info@eyeclimate.com",
+        contactPoint: {
+          "@type": "ContactPoint",
+          email: "info@eyeclimate.com",
+          contactType: "sales and project inquiries",
+          areaServed: "Worldwide",
+          availableLanguage: "English",
+        },
+        address: {
+          "@type": "PostalAddress",
+          addressLocality: "Stanford",
+          addressRegion: "CA",
+          addressCountry: "US",
+        },
+        knowsAbout: [
+          "Earth observation",
+          "Methane detection and quantification",
+          "Wildlife monitoring",
+          "Air-quality intelligence",
+          "Remote sensing",
+          "Geospatial artificial intelligence",
+        ],
         sameAs: [
           "https://www.linkedin.com/company/eyeclimate/",
           "https://www.instagram.com/eyeclimate/",
@@ -78,6 +102,8 @@ export default function RootLayout({
         "@id": `${getSiteUrl()}/#website`,
         url: getSiteUrl(),
         name: "Eyeclimate",
+        description:
+          "Decision-ready environmental intelligence from satellite, airborne, drone, and ground-sensor data.",
         publisher: { "@id": `${getSiteUrl()}/#organization` },
         inLanguage: "en-US",
       },
